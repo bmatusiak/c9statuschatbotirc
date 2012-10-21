@@ -1,6 +1,7 @@
 var irc = require('irc');
 var client = new irc.Client('irc.freenode.net', 'c9bot', {
-    channels: ['#cloud9ide']
+    channels: ['#cloud9ide'],
+    floodProtection: true
 });
 
 client.addListener('message', function (from, to, message) {
