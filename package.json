@@ -1,0 +1,18 @@
+{
+  "author": {
+    "name": "Bradley Matusiak",
+    "email": "bmatusiak@gmail.com"
+  },
+  "name": "mbirc",
+  "node":"0.6.18",
+  "engines": {
+    "node": "0.6.18",
+    "npm":  "1.1.9"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+      "irc":"0.3.4",
+      "jsdom":"0.2.15",
+      "request":"2.11.4"
+  }
+}
