@@ -32,7 +32,7 @@ controller.search = function(passObj, messageSplit) {
 
     var searchPhrase, searchClosed = false;
     if (messageSplit[1] === "--closed") {
-        messageSplit.shift().shift();
+        messageSplit.shift(); messageSplit.shift();
         searchPhrase = messageSplit.join("+");
         searchClosed = true;
     }
