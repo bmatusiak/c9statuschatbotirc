@@ -5,6 +5,11 @@ var tools = require(__dirname+"/tools.js");
 
 var robot = new tools.Emitter();
 
+robot.sayVersion = function(passObj) {
+    robot.say(passObj, "c9bot version 0.3");
+};
+robot.on("botVersion",robot.sayVersion);
+
 // Generic send method
 robot.say = function(passObj, message) {
     // Channel
