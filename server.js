@@ -3,7 +3,7 @@ var irc = require('irc');
 var robotBrain = __dirname + "/control.js";
 
 var robotName = 'c9bot',
-    robotServer = 'irc.synirc.org',
+    robotServer = 'irc.freenode.net',
 	robotChannel = '#cloud9ide';
 	
 var robot = new irc.Client(robotServer,robotName,{	channels: [robotChannel] , floodProtection: true});
