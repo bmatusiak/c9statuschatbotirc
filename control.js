@@ -100,7 +100,7 @@ robot.sayNVMmessage = function(passObj, messageSplit) {
     //bmatusiak
     robot.say(passObj, 'Node Version Manager = "nvm use v0.6" || "nvm use v0.8" = Switch node versions');
 }
-robot.on("nvm",robot.sayIssue);
+robot.on("nvm",robot.sayNVMmessage);
 
 /*
     Simple User System  - bmatusiak
