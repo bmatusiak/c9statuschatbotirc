@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var uri = process.env.MONGOLAB_URI || 
-    "mongodb://heroku_app7760458:uien9q6mgr7vct1uat3tf6j3v@ds041367.mongolab.com:41367/heroku_app7760458";
+    "mongodb://c9bot_r:readonly@ds041347.mongolab.com:41347/heroku_app7760458";//Readonly
 var db = mongoose.createConnection(uri);
 
 //Commands!!
