@@ -1,0 +1,10 @@
+{
+    "name": "irc",
+    "version": "0.0.1",
+    "main": "irc.js",
+    "private": true,
+    "plugin": {
+        "provides": ["irc"],
+        "consumes":["control"]
+    }
+}

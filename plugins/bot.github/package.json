@@ -1,0 +1,9 @@
+{
+    "name": "bot.github",
+    "version": "0.0.1",
+    "main": "github.js",
+    "private": true,
+    "plugin": {
+        "consumes": ["control"]
+    }
+}

@@ -3,7 +3,7 @@
     "name": "Bradley Matusiak",
     "email": "bmatusiak@gmail.com"
   },
-  "name": "mbirc",
+  "name": "c9botirc",
   "node":"0.6.18",
   "engines": {
     "node": "0.6.18",
@@ -14,6 +14,7 @@
       "irc":"0.3.4",
       "jsdom":"0.2.15",
       "request":"2.11.4",
-      "mongoose":"*"
+      "mongoose":"*",
+      "architect":"0.1.7"
   }
 }

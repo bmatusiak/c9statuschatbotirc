@@ -1,0 +1,10 @@
+{
+    "name": "irc.controller",
+    "version": "0.0.1",
+    "main": "control.js",
+    "private": true,
+    "plugin": {
+        "provides": ["control"],
+        "consumes": ["db","emitter"]
+    }
+}

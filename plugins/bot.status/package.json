@@ -1,0 +1,9 @@
+{
+    "name": "bot.status",
+    "version": "0.0.1",
+    "main": "status.js",
+    "private": true,
+    "plugin": {
+        "consumes": ["control"]
+    }
+}

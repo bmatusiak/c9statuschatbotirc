@@ -1,0 +1,9 @@
+{
+    "name": "tools",
+    "version": "0.0.1",
+    "main": "tools.js",
+    "private": true,
+    "plugin": {
+        "provides": ["emitter"]
+    }
+}

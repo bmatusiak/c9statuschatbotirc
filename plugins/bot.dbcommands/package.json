@@ -1,0 +1,9 @@
+{
+    "name": "bot.dbcommands",
+    "version": "0.0.1",
+    "main": "db.commands.js",
+    "private": true,
+    "plugin": {
+        "consumes": ["control","db","users"]
+    }
+}

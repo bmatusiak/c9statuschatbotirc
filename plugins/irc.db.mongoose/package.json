@@ -1,0 +1,9 @@
+{
+    "name": "irc.db.mongoose",
+    "version": "0.0.1",
+    "main": "db.js",
+    "private": true,
+    "plugin": {
+        "provides": ["db"]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "bot.users",
+    "version": "0.0.1",
+    "main": "users.js",
+    "private": true,
+    "plugin": {
+        "provides":["users"],
+        "consumes": ["control","db","emitter"]
+    }
+}
