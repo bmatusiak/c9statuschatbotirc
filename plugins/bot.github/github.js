@@ -40,6 +40,7 @@ module.exports = function setup(options, imports, register) {
         robot.say(passObj, "https://github.com/ajaxorg/cloud9/issues/new");
     };
     robot.on("issue", robot.sayIssue);
+    robot.on("newissue", robot.sayIssue);
     
     register(null, {});
 };
