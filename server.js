@@ -1,35 +1,14 @@
-var irc = require('irc');
+var architect = require("architect");
+var path = require('path');
 
-var robotBrain = __dirname + "/control.js";
+var configPath = path.resolve(__dirname, "./config/", "ircbot");
 
-var robotName = 'c9bot',
-    robotServer = 'irc.freenode.net',
-	robotChannel = '#cloud9ide';
-	
-var robot = new irc.Client(robotServer,robotName,{	channels: [robotChannel] , floodProtection: true});
-robot.robotName = robotName,robot.robotServer=robotServer,robot.robotChannel=robotChannel;
+var plugins = require(configPath);
 
-robot.addListener('message', function (from, to, message) {
-    takeOverTheWorld("message",robot,from,to,message);
+architect.createApp(architect.resolveConfig(plugins, __dirname + "/plugins"), function(err, app) {
+    if (err) {
+        console.error("While starting the '%s':", configPath);
+        throw err;
+    }
+    console.log("Started '%s'!", configPath);
 });
-
-robot.addListener('notice', function (from, to, message) {
-    takeOverTheWorld("notice",robot,from,to,message);
-});
-
-robot.addListener('join', function (channel, nick, data) {
-    takeOverTheWorld("userJoin",robot,channel, nick,data);
-});
-
-robot.addListener('part', function (channel, nick, message) {
-    takeOverTheWorld("userPart",robot,channel, nick,message);
-});
-
-setInterval(function(){
-    takeOverTheWorld("6m-worker",robot);
-},60 * 6 * 1000);//6 minits = 10 time a hour
-
-function takeOverTheWorld(a,b,c,d,e){
-    require(robotBrain).emit(a,b,c,d,e);
-    delete require.cache[robotBrain];
-}
