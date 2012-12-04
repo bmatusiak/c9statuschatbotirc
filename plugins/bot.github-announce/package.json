@@ -1,0 +1,9 @@
+{
+    "name": "bot.github-announce",
+    "version": "0.0.1",
+    "main": "github-announce.js",
+    "private": true,
+    "plugin": {
+        "consumes": ["control"]
+    }
+}

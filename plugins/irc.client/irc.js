@@ -33,8 +33,8 @@ module.exports = function setup(options, imports, register) {
     });
     
     setInterval(function() {
-        takeOverTheWorld("6m-worker", robot);
-    }, 60 * 6 * 1000); //6 minits = 10 time a hour
+        takeOverTheWorld("-worker-", robot);
+    }, options.workerTimer);
     
     function takeOverTheWorld(a, b, c, d, e) {
         imports.control.irc.emit(a, b, c, d, e);

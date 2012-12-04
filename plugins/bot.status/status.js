@@ -3,7 +3,23 @@ var jsdom = require('jsdom').jsdom;
 
 module.exports = function setup(options, imports, register) {
     var robot = imports.control;
-
+    
+    //Auto Status notice announce
+    if (!process.currentStatus) process.currentStatus = null;
+    
+    robot.on("_worker", function(client) {
+        //bmatusiak
+        getStatusFromC9io(function(message) {
+            if (process.currentStatus === null) {
+                process.currentStatus = message;
+            }
+            else if (process.currentStatus != message) {
+                process.currentStatus = message;
+                client.notice(client.robotChannel, message);
+            }
+        });
+    });
+    
     var getStatusFromC9io = function(callback) {
         //bmatusiak
         request('http://status.c9.io/', function(error, response, body) {

@@ -8,7 +8,8 @@ module.exports = [
         packagePath: "./irc.client",
         name : 'c9botTEST',
         server : 'irc.freenode.net',
-        channel : '#bmTest'
+        channel : '#bmTest',
+        workerTimer : 60 * 3 * 1000  //3 min = 20 times a hour
     },
     {
         packagePath: "./irc.db.mongoose",
@@ -17,5 +18,6 @@ module.exports = [
     "./bot.status",
     "./bot.github",
     "./bot.dbcommands",
-    "./bot.users"
+    "./bot.users",
+    "./bot.github-announce"
 ];

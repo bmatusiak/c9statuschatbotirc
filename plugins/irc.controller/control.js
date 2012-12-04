@@ -1,7 +1,5 @@
 module.exports = function setup(options, imports, register) {
     options.botprefix;// "!"
-    //imports.tools;
-    //imports.db;
         
     var control = new imports.emitter();
     
@@ -50,7 +48,7 @@ module.exports = function setup(options, imports, register) {
         //console.log("user",nick,"part channel",channel,"message:",message)
     });
     
-    control.irc.on("6m-worker", function(client) {
+    control.irc.on("-worker-", function(client) {
         control.emit("_worker", client);
     });
     
